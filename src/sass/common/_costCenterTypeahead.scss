@@ -1,0 +1,99 @@
+.costCenterTypeAhead {
+  position: relative;
+  width: 100%;
+
+  input {
+    height: 32px;
+    width: 100%;
+
+    padding: 0 12px;
+  }
+
+  .caretContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 30px;
+
+    cursor: pointer;
+
+    .caret {
+      position: absolute;
+      right: 8px;
+      top: 15px;
+      vertical-align: middle;
+    }
+  }
+
+  .hide-dropdown {
+    display: none;
+  }
+
+  .show-dropdown {
+    position: absolute;
+    min-height: 100px;
+    top: 35px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+    padding: 0;
+
+    background: #fdfdfd;
+    border-color: #cbcfe2 #c8cee7 #c4c7d7;
+    border-radius: 3px;
+    border: 1px solid;
+
+    ul {
+      padding-left: 0px;
+      height: 125px;
+      min-height: 125px;
+      max-height: 125px;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    li {
+      display: block;
+      position: relative;
+      margin: 0px 1px;
+
+      padding: 4px 8px;
+
+      color: #808394;
+      font-size: 12px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      span {
+        font-weight: 200;
+      }
+
+      &:nth-child(odd) {
+        background-color: #efefef
+      }
+
+      &:hover, &:nth-child(odd):hover {
+        background: #338cdf;
+        border-color: #2380dd #2179d5 #1a60aa;
+        color: #fff;
+      }
+    }
+
+    hr {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .agPaginationControls {
+      padding-bottom: 5px;
+    }
+  }
+}

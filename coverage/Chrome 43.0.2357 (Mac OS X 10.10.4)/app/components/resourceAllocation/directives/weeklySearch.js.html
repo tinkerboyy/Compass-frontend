@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/resourceAllocation/directives/weeklySearch.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">app/components/resourceAllocation/directives/weeklySearch.js</span></h1>
+    <h2>
+        Statements: <span class="metric">50.59% <small>(43 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">5% <small>(1 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">23.81% <small>(5 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">50.59% <small>(43 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/components/resourceAllocation/directives/</a> &#187; weeklySearch.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module('resourceAllocation.directive.WeeklySearch',[
+    'resourceAllocation.service.ResourceAllocationService',
+    'resourceAllocation.directive.CostCenterRenderer',
+    'resourceAllocation.directive.CostCenterTypeahead',
+    'resourceAllocation.directive.agGridPagination'
+    ])
+    .controller("WeeklySearchController", ['$scope', '$filter', '$interval', 'ResourceAllocationService',
+        function($scope, $filter, $interval, ResourceAllocationService){
+            var weeklySearch = this;
+            weeklySearch.searchPhrase = "";
+            weeklySearch.selectedCostCenter = null;
+            weeklySearch.payGroups = [];
+            weeklySearch.selectedPayGroup = null;
+            weeklySearch.weekEndingDate = null;
+            weeklySearch.weekEndingDateOpened = false;
+            weeklySearch.weekEndingDateFormat = "MM/dd/yyyy";
+            weeklySearch.weekEndingDateDateOptions = {
+                formatYear: 'yy',
+                startingDay: 1
+            };
+&nbsp;
+            // Table Header Details
+            var columnDefs = [
+                {headerName: "Cost Center", field: "deptName", width: 150, suppressMenu: true, cellRenderer: renderCustomCostCenter},
+                {headerName: "Cost Center Description", field: "deptDesc", width: 150, suppressMenu: true},
+                {headerName: "Site Name", field:"wbtName", width: 150, suppressMenu: true, cellRenderer: renderCustomSiteName},
+                {headerName: "Site Desc", field:"wbtDesc", width: 150, suppressMenu: true},
+                {headerName: "Scheduled Hours", field: "schedHours", width: 150, suppressMenu: true},
+                {headerName: "Scheduled Amount", field: "schedAmount", width: 150, suppressMenu: true, valueGetter: amountValueGetter},
+                {headerName: "Actual Hours", field: "actualHours", width: 150, suppressMenu: true},
+                {headerName: "Actual Amount", field: "actualAmount", width: 150, suppressMenu: true, valueGetter: amountValueGetter},
+                {headerName: "Forecast Hours", field: "forcastHours", width: 150, suppressMenu: true},
+                {headerName: "Forecast Amount", field: "forcastAmount", width: 150, suppressMenu: true, valueGetter: amountValueGetter}
+            ];
+&nbsp;
+            // exposed for pagination
+            weeklySearch.getResults = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                return ResourceAllocationService.currentResultObject;</span>
+            };
+&nbsp;
+            // exposed for pagination
+            weeklySearch.getRequestParams = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                return ResourceAllocationService.currentRequestParams;</span>
+            };
+&nbsp;
+            // exposed for pagination
+            weeklySearch.datasource = {
+                source: null,
+                lastParams: null
+            };
+&nbsp;
+            // Table Grid default options
+            weeklySearch.gridOptions = {
+                enableServerSideSorting: true,
+                enableServerSideFilter: true,
+                columnDefs: columnDefs,
+                rowData: null,
+                enableColResize: true,
+                angularCompileRows: true,
+                suppressVerticalScroll: true,
+                ready: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                    gridReady = true;</span>
+                }
+            };
+&nbsp;
+            // variable to check once the grid is loaded
+            var gridReady = false;
+&nbsp;
+            // wait until the grid is ready, and we have a date set in weekEndingDate
+            var checkEndDate = $interval(<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                if (gridReady &amp;&amp; weeklySearch.weekEndingDate) {</span>
+<span class="cstat-no" title="statement not covered" >                    weeklySearch.datasource.source = createNewDataSource();</span>
+<span class="cstat-no" title="statement not covered" >                    $interval.cancel(checkEndDate);</span>
+                }
+            }, 100);
+&nbsp;
+&nbsp;
+            // Add hyperlink for cost center deptName
+<span class="fstat-no" title="function not covered" >            function renderCustomCostCenter(params) {</span>
+<span class="cstat-no" title="statement not covered" >                return '&lt;div cost-center-renderer="data" week-ending-date="weeklySearch.getFormattedDate()"&gt;&lt;/div&gt;';</span>
+            }
+&nbsp;
+            // Add hyperlink for cost center wbtName
+<span class="fstat-no" title="function not covered" >            function renderCustomSiteName(params) {</span>
+<span class="cstat-no" title="statement not covered" >                return '&lt;div cost-center-renderer="data" show-site-name="true" week-ending-date="weeklySearch.getFormattedDate()"&gt;&lt;/div&gt;';</span>
+            }
+&nbsp;
+            // Custom Filter for the Amount
+<span class="fstat-no" title="function not covered" >            function amountValueGetter(params) {</span>
+<span class="cstat-no" title="statement not covered" >                return $filter('currency')(params.data[params.colDef.field]);</span>
+            }
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function createNewDataSource() {</span>
+<span class="cstat-no" title="statement not covered" >                var dataSource = {</span>
+                    pageSize: 25,
+                    getRows: <span class="fstat-no" title="function not covered" >function(params) {</span>
+<span class="cstat-no" title="statement not covered" >                        var resultsPerPage = 25;</span>
+<span class="cstat-no" title="statement not covered" >                        var currentPage = parseInt(params.startRow / resultsPerPage, 10);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        params.endRow = params.startRow + resultsPerPage;</span>
+<span class="cstat-no" title="statement not covered" >                        params.deptNameDesc = params.hasOwnProperty("deptNameDesc") ? params.deptNameDesc : "";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (!params.hasOwnProperty("successCallback")) {</span>
+<span class="cstat-no" title="statement not covered" >                            weeklySearch.gridOptions.api.showLoading(true);</span>
+                        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        ResourceAllocationService</span>
+                            .getCostCenters(weeklySearch.getFormattedDate(), currentPage + 1, params.deptNameDesc,
+                                            0, params.sortModel, resultsPerPage)
+                            .then(<span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                                var lastRow = data.total;</span>
+<span class="cstat-no" title="statement not covered" >                                var dataRows = data.data;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if (dataRows.length !== resultsPerPage) {</span>
+<span class="cstat-no" title="statement not covered" >                                    lastRow = dataRows.length;</span>
+                                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                weeklySearch.datasource.lastParams = params;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                weeklySearch.gridOptions.api.setRows(dataRows);</span>
+<span class="cstat-no" title="statement not covered" >                                weeklySearch.gridOptions.api.onNewRows();</span>
+<span class="cstat-no" title="statement not covered" >                                weeklySearch.gridOptions.api.showLoading(false);</span>
+                            });
+&nbsp;
+                    }
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                weeklySearch.gridOptions.api.setDatasource(dataSource);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return dataSource;</span>
+            }
+&nbsp;
+            // updates the search parameters when the header changes
+            weeklySearch.updateGridSearch = <span class="fstat-no" title="function not covered" >function(selectedCostCenter) {</span>
+<span class="cstat-no" title="statement not covered" >                var params = {</span>
+                    startRow: 1,
+                    deptNameDesc: selectedCostCenter.deptName
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                weeklySearch.datasource.source.getRows(params);</span>
+            };
+&nbsp;
+            weeklySearch.payGroupSelected = function(selectedPayGroup) {
+                $scope.$broadcast('refreshDatepickers');
+                weeklySearch.selectedPayGroup = selectedPayGroup;
+                weeklySearch.weekEndingDate = $filter("date")(selectedPayGroup.weekEndDate, weeklySearch.weekEndingDateFormat);
+            };
+&nbsp;
+            // dates that are disabled on the calendar - related to selectedPayGroup (Thu/Sat)
+            weeklySearch.disabledDates = <span class="fstat-no" title="function not covered" >function(date, mode) {</span>
+<span class="cstat-no" title="statement not covered" >                if (weeklySearch.selectedPayGroup) {</span>
+<span class="cstat-no" title="statement not covered" >                    return (mode === 'day' &amp;&amp; (date.getDay() !==  weeklySearch.selectedPayGroup.weekEndDay));</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    return false;</span>
+                }
+            };
+&nbsp;
+            // highlights the full week
+            weeklySearch.getDayClass = <span class="fstat-no" title="function not covered" >function(date, mode) {</span>
+<span class="cstat-no" title="statement not covered" >                var endTime = (new Date(weeklySearch.weekEndingDate)).getTime();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (date.getTime() &gt; (endTime - (24*60*60*1000*7)) &amp;&amp;</span>
+                    date.getTime() &lt; endTime) {
+<span class="cstat-no" title="statement not covered" >                    return "selectedWeekBackground";</span>
+                }
+<span class="cstat-no" title="statement not covered" >                return "";</span>
+            };
+&nbsp;
+            weeklySearch.openWeekEndingDateDatepicker = <span class="fstat-no" title="function not covered" >function($event) {</span>
+<span class="cstat-no" title="statement not covered" >                $event.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >                $event.stopPropagation();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                weeklySearch.weekEndingDateOpened = !weeklySearch.weekEndingDateOpened;</span>
+            };
+&nbsp;
+            // datepicker will set a full dateTtime format, we only want mm/dd/yyyy
+            weeklySearch.getFormattedDate = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                return $filter("date")(weeklySearch.weekEndingDate, weeklySearch.weekEndingDateFormat);</span>
+            };
+&nbsp;
+            // will eventually turn into a service call?
+            function getPayGroups() {
+                weeklySearch.payGroups = [{
+                    id: "Fri-Thurs Hourly",
+                    name: "Fri-Thurs Hourly",
+                    weekEndDay: 4
+                }, {
+                    id: "Sun-Sat Hourly",
+                    name: "Sun-Sat Hourly",
+                    weekEndDay: 6
+                }];
+&nbsp;
+                angular.forEach(weeklySearch.payGroups, function(value, key) {
+                    value.weekEndDate = getNextEndingDay(value);
+                });
+&nbsp;
+                weeklySearch.selectedPayGroup = weeklySearch.payGroups[0];
+                weeklySearch.payGroupSelected(weeklySearch.selectedPayGroup);
+            }
+&nbsp;
+            // determines when the next day is for the selected pay group
+            function getNextEndingDay(payGroup) {
+                var today = new Date();
+                var newDate = new Date(today);
+&nbsp;
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (newDate.getDay() &lt;= payGroup.weekEndDay) {
+                    newDate.setDate(newDate.getDate() - (newDate.getDay() - payGroup.weekEndDay));
+                } else {
+<span class="cstat-no" title="statement not covered" >                    newDate.setDate(newDate.getDate() + (7 - newDate.getDay() + payGroup.weekEndDay));</span>
+                }
+&nbsp;
+                return newDate;
+            }
+&nbsp;
+            getPayGroups();
+        }]
+    )
+&nbsp;
+    .directive("weeklySearch", <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: "A",
+            controller: "WeeklySearchController as weeklySearch",
+            templateUrl: "resourceAllocation/directives/weeklySearch.tpl.html"
+        };
+    });
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 20 2015 15:07:09 GMT-0400 (EDT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

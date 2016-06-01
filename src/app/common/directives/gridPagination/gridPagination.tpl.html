@@ -1,0 +1,22 @@
+<div class="paginationControls">
+    <div class="controls">
+        <button ng-disabled="!paginationController.previousEnabled" ng-click="paginationController.goFirst()">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-chevron-left secondChevron" aria-hidden="true"></span>
+        </button>
+        <button ng-disabled="!paginationController.previousEnabled" ng-click="paginationController.goPrevious()">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </button>
+        {{ paginationController.currentPage }} of {{ paginationController.pageCount }}
+        <button ng-disabled="!paginationController.nextEnabled" ng-click="paginationController.goNext()">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </button>
+        <button ng-disabled="!paginationController.nextEnabled" ng-click="paginationController.goLast()">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-chevron-right secondChevron" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="totalRecords">
+        Displaying {{ paginationController.startRow }}-{{ paginationController.endRow}} of {{ paginationController.totalResults }}
+    </div>
+</div>

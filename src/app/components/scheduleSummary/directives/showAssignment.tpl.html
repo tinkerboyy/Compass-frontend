@@ -1,0 +1,114 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ ::taskAssignmentCtrl.assignment.Name }}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="container-fluid">
+            <form name="assignmentForm" novalidate role="form">
+                <div class="row form-row">
+                    <div class="col-md-12">
+                        <div class="col-md-4">
+                            Start/End:
+                        </div>
+                        <div class="col-md-8" >
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <input class="form-control" type="text" name="startTime" ng-model="taskAssignmentCtrl.assignment.startTime" required/>
+                                <!--<span class="help-block" ng-show="assignmentForm.startTime.$invalid">start time is required</span>-->
+                            </div>
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <input class="form-control" type="text" name="endTime" ng-model="taskAssignmentCtrl.assignment.endTime" required/>
+                                <!--<span class="help-block" ng-show="assignmentForm.endTime.$invalid">End time is required</span>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-row">
+                    <div class="col-md-12">
+                        <div class="col-md-4">
+                            Meal:
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <input class="form-control" type="text" name="brkStartTime" ng-model="taskAssignmentCtrl.assignment.brkStartTime" required/>
+                                <!--<span class="help-block" ng-show="assignmentForm.brkStartTime.$invalid">start time is required</span>-->
+                            </div>
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <input class="form-control" type="text" name="brkEndTime" ng-model="taskAssignmentCtrl.assignment.brkEndTime" required/>
+                                <!--<span class="help-block" ng-show="assignmentForm.brkEndTime.$invalid">End time is required</span>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-row">
+                    <div class="col-md-12">
+                        <div class="col-md-4">
+                            Cost Center:
+                        </div>
+                        <div class="col-md-8">
+                            <cost-center-typeahead
+                                    ng-model="taskAssignmentCtrl.assignment.wbtName">
+                            </cost-center-typeahead>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-row">
+                    <div class="col-md-12">
+                        <div class="col-md-4">
+                            Home Team:
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" ng-model="taskAssignmentCtrl.assignment.costCenterName" disabled/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-row">
+                    <div class="col-md-12">
+                        <div class="col-md-4">
+                            Job:
+                        </div>
+                        <div class="col-md-8">
+                            <div class="dropdown" dropdown>
+                                <button class="btn btn-default dropdown-toggle"
+                                        dropdown-toggle
+                                        ng-disabled="disabled">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li ng-repeat="job in taskAssignmentCtrl.jobs">
+                                        {{ ::job.jobDesc }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <div class="col-md-4">
+                    <button class="btn btn-primary btn-lg"  ng-click="taskAssignmentCtrl.cancel()">Cancel</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-lg">Delete</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-lg">Keep Changes</button>
+                </div> -->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary" ng-click="taskAssignmentCtrl.cancel()">Cancel</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary" ng-click="taskAssignmentCtrl.keepChanges()">Keep Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

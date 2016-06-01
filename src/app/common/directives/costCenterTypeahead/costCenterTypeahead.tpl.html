@@ -1,0 +1,30 @@
+<div class="costCenterTypeAhead">
+    <input type="search"
+           class="form-control"
+           placeholder="{{ 'COMMON.SEARCH' | translate }}"
+           autocomplete="off"
+           ng-model="typeaheadCtrl.searchPhrase"
+           ng-change="typeaheadCtrl.searchCostCenter(typeaheadCtrl.searchPhrase)"
+           ng-model-options="{debounce:500}">
+        <div class="caretContainer" ng-click="typeaheadCtrl.toggleDropDown()">
+            <span class="caret"></span>
+        </div>
+    </input>
+
+    <div ng-class="{'show-dropdown': typeaheadCtrl.showDropDownList, 'hide-dropdown': !typeaheadCtrl.showDropDownList}">
+        <ul>
+            <li ng-repeat="list in typeaheadCtrl.dropdownList" ng-click="typeaheadCtrl.selected(list)">
+                {{ list | formatCostCenter }}
+            </li>
+        </ul>
+
+        <div class="loadingAnimation" ng-show="typeaheadCtrl.lookupsPending > 0"></div>
+
+        <hr />
+
+        <div grid-pagination="typeaheadCtrl.datasource"
+             results="typeaheadCtrl.getResults()"
+             request-params="typeaheadCtrl.getRequestParams()">
+        </div>
+    </div>
+</div>

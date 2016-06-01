@@ -1,0 +1,545 @@
+.costCenterTypeAhead {
+  position: relative;
+  width: 100%;
+}
+.costCenterTypeAhead input {
+  height: 32px;
+  width: 100%;
+  padding: 0 12px;
+}
+.costCenterTypeAhead .caretContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+}
+.costCenterTypeAhead .caretContainer .caret {
+  position: absolute;
+  right: 8px;
+  top: 15px;
+  vertical-align: middle;
+}
+.costCenterTypeAhead .hide-dropdown {
+  display: none;
+}
+.costCenterTypeAhead .show-dropdown {
+  position: absolute;
+  min-height: 100px;
+  top: 35px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0;
+  background: #fdfdfd;
+  border-color: #cbcfe2 #c8cee7 #c4c7d7;
+  border-radius: 3px;
+  border: 1px solid;
+}
+.costCenterTypeAhead .show-dropdown ul {
+  padding-left: 0px;
+  height: 125px;
+  min-height: 125px;
+  max-height: 125px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.costCenterTypeAhead .show-dropdown li {
+  display: block;
+  position: relative;
+  margin: 0px 1px;
+  padding: 4px 8px;
+  color: #808394;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  cursor: pointer;
+}
+.costCenterTypeAhead .show-dropdown li span {
+  font-weight: 200;
+}
+.costCenterTypeAhead .show-dropdown li:nth-child(odd) {
+  background-color: #efefef;
+}
+.costCenterTypeAhead .show-dropdown li:hover, .costCenterTypeAhead .show-dropdown li:nth-child(odd):hover {
+  background: #338cdf;
+  border-color: #2380dd #2179d5 #1a60aa;
+  color: #fff;
+}
+.costCenterTypeAhead .show-dropdown hr {
+  margin: 0px;
+  padding: 0px;
+}
+.costCenterTypeAhead .show-dropdown .agPaginationControls {
+  padding-bottom: 5px;
+}
+
+.paginationControls {
+  position: relative;
+  width: 100%;
+}
+.paginationControls .controls {
+  margin-left: 15px;
+  margin-top: 6px;
+}
+.paginationControls .controls .secondChevron {
+  margin-left: -13px;
+}
+.paginationControls .controls button {
+  font-size: 16px;
+  padding: 4px 0px;
+}
+.paginationControls .totalRecords {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.mainContent {
+  min-height: 300px;
+  margin-top: 38px;
+  margin-bottom: 46px;
+}
+
+input {
+  border: 1px solid #aaa;
+}
+
+input[readonly] {
+  background-color: #ebebe4;
+  border: 1px solid #aaa;
+}
+
+input[type=text] {
+  min-height: 25px;
+}
+
+select:disabled {
+  background-color: #ebebe4;
+}
+
+.unsupportedBrowser {
+  padding-top: 100px;
+  margin: auto;
+}
+.unsupportedBrowser .image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 43px;
+  height: 167px;
+  padding-top: 50px;
+}
+.unsupportedBrowser .text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.tab-view {
+  margin: 0px;
+  padding: 0px;
+  margin-top: -1px;
+  border: 1px solid #ddd;
+}
+
+body {
+  font-size: 12px;
+}
+
+.form-control, .btn {
+  font-size: 12px;
+}
+
+.loadingAnimation, .resourceAllocation .weeklySearch .gridContainer .gridParent .grid .ag-loading-center {
+  display: block;
+  background-image: url("/images/loading.gif");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.appHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 20px;
+  margin-bottom: 0px;
+  background-color: #f8f8f8;
+  border: 1px solid transparent;
+  border-color: #e7e7e7;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+.appHeader .container-fluid {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.appHeader .row {
+  position: relative;
+}
+.appHeader .row h3 {
+  padding: 0px;
+  padding-left: 15px;
+  margin: 0px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f8f8;
+  border: 1px solid transparent;
+  border-color: #e7e7e7;
+}
+.footer .container-fluid {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.resourceAllocation .costCenterRenderer .costCenterLink {
+  text-decoration: underline;
+}
+.resourceAllocation .weeklySearch h2 {
+  margin-top: 5px;
+}
+.resourceAllocation .weeklySearch .header {
+  margin: 20px 0;
+}
+.resourceAllocation .weeklySearch .header input, .resourceAllocation .weeklySearch .header select {
+  height: 32px;
+}
+.resourceAllocation .weeklySearch .header .payGroup {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 12px;
+}
+.resourceAllocation .weeklySearch .header .payGroup .dropdown-toggle {
+  width: 100%;
+  background-color: inherit;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+.resourceAllocation .weeklySearch .header .payGroup .dropdown-toggle .caret {
+  position: absolute;
+  right: 8px;
+  top: 15px;
+  pointer-events: none;
+}
+.resourceAllocation .weeklySearch .header .payGroup li a:hover {
+  background: #338cdf;
+  border-color: #2380dd #2179d5 #1a60aa;
+  color: #fff;
+}
+.resourceAllocation .weeklySearch .header .datepicker tr:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.resourceAllocation .weeklySearch .header .selectedWeekBackground {
+  background-color: #008800;
+  font-weight: 500;
+}
+.resourceAllocation .weeklySearch .header .glyphicon-calendar--position {
+  position: absolute;
+  right: 19px;
+  top: 38px;
+  cursor: pointer;
+}
+.resourceAllocation .weeklySearch .header .button-wrapper {
+  margin: 28px 0 0;
+}
+.resourceAllocation .weeklySearch .gridContainer {
+  position: relative;
+  height: 819px;
+}
+.resourceAllocation .weeklySearch .gridContainer .col-md-12 {
+  height: 100%;
+}
+.resourceAllocation .weeklySearch .gridContainer .gridParent {
+  height: 95%;
+}
+.resourceAllocation .weeklySearch .gridContainer .gridParent .grid {
+  height: 100%;
+}
+.resourceAllocation .weeklySearch .gridContainer .gridParent .grid .ag-loading-center {
+  display: inline;
+  padding: 44px 30px 10px 30px;
+  background-position: center 10px;
+}
+.resourceAllocation .weeklySearch .gridContainer .gridParent .grid .ag-root {
+  font-size: 12px;
+}
+.resourceAllocation .weeklySearch .gridContainer .gridParent #south {
+  display: none;
+}
+
+.taskListCalendar > div > .col-md-4 {
+  padding: 0px;
+}
+.taskListCalendar > div > .col-md-8 {
+  padding: 0px;
+}
+.taskListCalendar .taskList {
+  padding: 0px;
+}
+.taskListCalendar .taskList table {
+  width: 100%;
+  table-layout: fixed;
+}
+.taskListCalendar .taskList table .header .headerTaskName {
+  width: 12%;
+}
+.taskListCalendar .taskList table .header .headerStartTime {
+  width: 8%;
+}
+.taskListCalendar .taskList table .header .headerEndTime {
+  width: 8%;
+}
+.taskListCalendar .taskList table .header .headerTotalHours {
+  width: 3%;
+}
+.taskListCalendar .taskList table .header .headerDayOfWeek {
+  text-align: center;
+}
+.taskListCalendar .taskList table .tasks tr {
+  display: table-row;
+}
+.taskListCalendar .taskList table .tasks td {
+  height: 1px;
+  padding: 0px;
+  border: 1px solid #000;
+  vertical-align: top;
+}
+.taskListCalendar .taskList table .tasks .taskName {
+  width: 12%;
+}
+.taskListCalendar .taskList table .tasks .startTime {
+  width: 8%;
+}
+.taskListCalendar .taskList table .tasks .endTime {
+  width: 8%;
+}
+.taskListCalendar .taskList table .tasks .totalHours {
+  width: 3%;
+}
+.taskListCalendar .taskList table .tasks .dayOfWeek {
+  width: 10%;
+  max-width: 10%;
+}
+
+.assignmentCalendarCell {
+  height: 100%;
+  width: 100%;
+}
+.assignmentCalendarCell ul {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.assignmentCalendarCell ul li {
+  padding: 3px 3px 0px 3px;
+}
+.assignmentCalendarCell ul li:last-child {
+  padding-bottom: 3px;
+}
+.assignmentCalendarCell .as-active-dropzone {
+  background-color: #99cc00;
+}
+.assignmentCalendarCell .as-sortable-placeholder {
+  display: none;
+}
+
+.as-sortable-dragging {
+  min-width: 150px;
+}
+
+.userAssignment {
+  width: 100%;
+  padding: 2px;
+  margin-bottom: 1px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.associatesList {
+  height: 100%;
+  border: 3px solid lightgrey;
+  min-height: 525px;
+}
+.associatesList .associatesHeader .title {
+  display: inline-block;
+  width: 25%;
+}
+.associatesList .associatesHeader .inputFields, .associatesList .associatesHeader .costCenter, .associatesList .associatesHeader .jobTitle {
+  display: inline-block;
+  width: 70%;
+}
+.associatesList .associatesHeader .searchByCostCenter, .associatesList .associatesHeader .searchByJobTitle {
+  padding-bottom: 8px;
+}
+.associatesList .associatesHeader .searchByAssociateName {
+  display: table;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.associatesList .associatesHeader .searchByAssociateName .titleAndSearch {
+  display: table-cell;
+  width: 80%;
+  border: 1px solid #999;
+}
+.associatesList .associatesHeader .searchByAssociateName .titleAndSearch .title {
+  width: inherit;
+  padding: 5px 5px 5px 10px;
+}
+.associatesList .associatesHeader .searchByAssociateName .titleAndSearch .associateName {
+  width: 100%;
+  border-bottom: none;
+  border-right: none;
+}
+.associatesList .associatesHeader .searchByAssociateName .hoursContainer {
+  display: table-cell;
+  position: relative;
+  width: 20%;
+  border: 1px solid #999;
+  border-left: none;
+  border-bottom: none;
+}
+.associatesList .associatesHeader .searchByAssociateName .hoursContainer .hours {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.associatesList .associatesContainer ul {
+  padding: 0px;
+  list-style-type: none;
+}
+.associatesList .associatesContainer .jobHeader {
+  position: relative;
+  padding: 6px;
+  background-color: #f5f5f5;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+.associatesList .associatesContainer .jobHeader .jobTitleIcon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  bottom: 0;
+}
+.associatesList .associateContainer .associate.evenRows {
+  background-color: #fafafa;
+}
+.associatesList .associateContainer .associate:hover {
+  background-color: #C1DDF1;
+}
+.associatesList .associateContainer .associate .associateDetails {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.associatesList .associateContainer .associate .associateDetails .associateJob {
+  display: none;
+}
+.associatesList .associateContainer .associate .associateDetails .associateName {
+  display: table-cell;
+  width: 80%;
+  padding: 5px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  border-right: 5px solid transparent;
+}
+.associatesList .associateContainer .associate .associateDetails .associateHours {
+  display: table-cell;
+  width: 20%;
+  border-left: 1px solid #999;
+  padding: 5px;
+}
+.associatesList .danger-hours {
+  color: #ED8B7E;
+}
+.associatesList .normal-hours {
+  color: #333333;
+}
+.associatesList .totalRecords {
+  display: none;
+}
+
+.scheduleSummary .task-based-scheduler .scheduler-row {
+  position: relative;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.as-sortable-drag .associateDetails {
+  max-width: 160px;
+  padding: 5px;
+  background-color: #fff;
+  border: solid 1px #000;
+}
+.as-sortable-drag .associateDetails .associateJob {
+  display: block;
+  font-weight: bold;
+}
+.as-sortable-drag .associateDetails .associateId {
+  display: none;
+}
+.as-sortable-drag .associateDetails .associateHours {
+  display: none;
+}
+.as-sortable-drag .associateDetails .associateHours .popover {
+  background-color: #D8EDED;
+}
+.as-sortable-drag .associateDetails .associateHours .popover.top > .arrow {
+  display: none;
+}
+.as-sortable-drag .associateDetails .associateHours .row-wrapper {
+  position: relative;
+  height: 400px;
+}
+.as-sortable-drag .associateDetails .associateHours .row-wrapper .row-positions-content {
+  position: absolute;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.modal-dialog .modal-content .panel {
+  margin: 0 0 5px;
+  border-radius: 0px;
+}
+.modal-dialog .modal-content .panel-primary {
+  border-color: transparent;
+}
+.modal-dialog .modal-content .form-group {
+  display: inline-block;
+  width: 90px;
+}
+.modal-dialog .modal-content .form-row {
+  margin: 5px 5px;
+}
+.modal-dialog .dropdown button {
+  min-width: 140px;
+}
+.modal-dialog .dropdown button .caret {
+  position: relative;
+  left: 55px;
+}

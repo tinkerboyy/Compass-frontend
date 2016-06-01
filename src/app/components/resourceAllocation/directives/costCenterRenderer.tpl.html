@@ -1,0 +1,6 @@
+<div class="costCenterRenderer">
+    <span ng-if="costCenterRenderer.showLink(data)" ng-click="costCenterRenderer.onClick(data, weekEndingDate)">
+        <a class="costCenterLink" href="#" onclick="return false;">{{ ::costCenterRenderer.displayText }}</a>
+    </span>
+    <span ng-if="!costCenterRenderer.showLink(data)">{{ ::costCenterRenderer.displayText }}</span>
+</div>

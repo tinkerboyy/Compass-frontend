@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/resourceAllocation/services/resourceAllocationService.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/components/resourceAllocation/services/resourceAllocationService.js</span></h1>
+    <h2>
+        Statements: <span class="metric">25% <small>(11 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">12.5% <small>(1 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">25% <small>(11 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/components/resourceAllocation/services/</a> &#187; resourceAllocationService.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module('resourceAllocation.service.ResourceAllocationService', [])
+    .factory('ResourceAllocationService', ['$http', '$q', 'API_PREFIX',
+        function($http, $q, API_PREFIX) {
+            // global variables
+            var resourceAllocationService = {};
+            resourceAllocationService.currentLookupRequestParams = null;
+            resourceAllocationService.currentLookupResultObject = null;
+&nbsp;
+            resourceAllocationService.currentRequestParams = null;
+            resourceAllocationService.currentResultObject = null;
+&nbsp;
+            // global variables
+            var _numberPerPage = 25;
+&nbsp;
+            //  getResourceAllocationList
+            resourceAllocationService.lookupCostCenters = <span class="fstat-no" title="function not covered" >function(searchPhrase, pageNumber, startRow, limit, sortModel) {</span>
+<span class="cstat-no" title="statement not covered" >                var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >                var url = API_PREFIX + "cg/user/staff/util/getcostcenters";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (!sortModel || sortModel.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >                    sortModel= [{field:"deptName", sort:"ASC"}];</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var reqObj = buildRequestObject(null, pageNumber, null, startRow, sortModel, limit);</span>
+<span class="cstat-no" title="statement not covered" >                reqObj.query = searchPhrase;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $http.get(url, {params: reqObj})</span>
+                    .success(<span class="fstat-no" title="function not covered" >function(response) {</span>
+                        // setting request params for other controllers needing to understand
+                        //  request params - current page, total per page, etc
+<span class="cstat-no" title="statement not covered" >                        resourceAllocationService.currentLookupRequestParams = reqObj;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        resourceAllocationService.currentLookupResultObject = response;</span>
+<span class="cstat-no" title="statement not covered" >                        deferred.resolve(response);</span>
+                    })
+                    .error(<span class="fstat-no" title="function not covered" >function(error) {</span>
+<span class="cstat-no" title="statement not covered" >                        deferred.reject(error);</span>
+                    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return deferred.promise;</span>
+&nbsp;
+            };
+&nbsp;
+            resourceAllocationService.getCostCenters = <span class="fstat-no" title="function not covered" >function(weekEndingDate, pageNumber, deptNameDesc, startRow, sortModel, limit) {</span>
+<span class="cstat-no" title="statement not covered" >                var deferred = $q.defer();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var url = API_PREFIX + "cg/user/scheduleresource/schedule_week";</span>
+<span class="cstat-no" title="statement not covered" >                var reqObj = buildRequestObject(weekEndingDate, pageNumber, deptNameDesc, startRow, sortModel, limit);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $http.get(url, {params: reqObj})</span>
+                    .then(<span class="fstat-no" title="function not covered" >function(res) {</span>
+                        // setting request params for other controllers needing to understand
+                        //  request params - current page, total per page, etc
+<span class="cstat-no" title="statement not covered" >                        resourceAllocationService.currentRequestParams = reqObj;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        resourceAllocationService.currentResultObject = res.data;</span>
+<span class="cstat-no" title="statement not covered" >                        deferred.resolve(res.data);</span>
+                    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return deferred.promise;</span>
+            };
+&nbsp;
+            // helper function to build the GET bundle
+<span class="fstat-no" title="function not covered" >            function buildRequestObject(weekEndingDate, pageNumber, deptNameDesc, startRow, sortModel, limit) {</span>
+<span class="cstat-no" title="statement not covered" >                var resultsPerPage = limit ? limit : _numberPerPage;</span>
+<span class="cstat-no" title="statement not covered" >                var reqObj = {</span>
+                    uId: 3,
+                    weekEndingDate: weekEndingDate,
+                    payGroupId: 10005,
+                    page: pageNumber,
+                    start: startRow,
+                    limit: resultsPerPage
+                };
+&nbsp;
+                // add weekEndingDate if defined
+<span class="cstat-no" title="statement not covered" >                if (weekEndingDate) {</span>
+<span class="cstat-no" title="statement not covered" >                    reqObj.weekEndingDate = weekEndingDate;</span>
+                }
+&nbsp;
+                // add deptNameDesc if defined
+<span class="cstat-no" title="statement not covered" >                if (deptNameDesc) {</span>
+<span class="cstat-no" title="statement not covered" >                    reqObj.deptNameDesc = deptNameDesc;</span>
+                }
+&nbsp;
+                // determine sort model
+<span class="cstat-no" title="statement not covered" >                if (sortModel &amp;&amp; sortModel.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                    var sortOptions = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    angular.forEach(sortModel, <span class="fstat-no" title="function not covered" >function (elem, key, array) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        sortOptions.push({ property: elem.field, direction: elem.sort});</span>
+                    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    reqObj.sort = JSON.stringify(sortOptions);</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    reqObj.sort = JSON.stringify([{property:"wbtName", direction:"ASC"}]);</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return reqObj;</span>
+            }
+&nbsp;
+            return resourceAllocationService;
+        }
+    ]);
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 20 2015 15:07:09 GMT-0400 (EDT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

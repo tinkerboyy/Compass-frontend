@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/resourceAllocation/directives/agGridPagination.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/components/resourceAllocation/directives/agGridPagination.js</span></h1>
+    <h2>
+        Statements: <span class="metric">2.17% <small>(1 / 46)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">2.17% <small>(1 / 46)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/components/resourceAllocation/directives/</a> &#187; agGridPagination.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module('resourceAllocation.directive.agGridPagination',[
+    'resourceAllocation.service.ResourceAllocationService'
+])
+    .controller("agPaginationController", ['$scope', 'ResourceAllocationService', <span class="fstat-no" title="function not covered" >function($scope, ResourceAllocationService) {</span>
+<span class="cstat-no" title="statement not covered" >        var agPaginationController = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        agPaginationController.totalResults = 0;</span>
+<span class="cstat-no" title="statement not covered" >        agPaginationController.previousEnabled = true;</span>
+<span class="cstat-no" title="statement not covered" >        agPaginationController.nextEnabled = true;</span>
+<span class="cstat-no" title="statement not covered" >        agPaginationController.startRow = 0;</span>
+<span class="cstat-no" title="statement not covered" >        agPaginationController.endRow = 0;</span>
+<span class="cstat-no" title="statement not covered" >        agPaginationController.currentPage = 0;</span>
+<span class="cstat-no" title="statement not covered" >        agPaginationController.pageCount = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        agPaginationController.goFirst = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var oldParams = angular.copy($scope.datasource.lastParams);</span>
+<span class="cstat-no" title="statement not covered" >            var params = {</span>
+                startRow: 0,
+                sortModel: oldParams.sortModel
+            };
+<span class="cstat-no" title="statement not covered" >            $scope.datasource.source.getRows(params);</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        agPaginationController.goPrevious = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var oldParams = angular.copy($scope.datasource.lastParams);</span>
+<span class="cstat-no" title="statement not covered" >            var startRow = oldParams.startRow - $scope.datasource.source.pageSize;</span>
+<span class="cstat-no" title="statement not covered" >            var params = {</span>
+                startRow: startRow,
+                sortModel: oldParams.sortModel
+            };
+<span class="cstat-no" title="statement not covered" >            $scope.datasource.source.getRows(params);</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        agPaginationController.goNext = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var oldParams = angular.copy($scope.datasource.lastParams);</span>
+<span class="cstat-no" title="statement not covered" >            var params = {</span>
+                startRow: oldParams.endRow,
+                sortModel: oldParams.sortModel
+            };
+<span class="cstat-no" title="statement not covered" >            $scope.datasource.source.getRows(params);</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        agPaginationController.goLast = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var oldParams = angular.copy($scope.datasource.lastParams);</span>
+<span class="cstat-no" title="statement not covered" >            var totalRows = agPaginationController.totalResults;</span>
+<span class="cstat-no" title="statement not covered" >            var pageSize = $scope.datasource.source.pageSize;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var startRow = (totalRows % pageSize &gt; 0) ? Math.floor(totalRows/pageSize) * pageSize : totalRows - pageSize;</span>
+<span class="cstat-no" title="statement not covered" >            var params = {</span>
+                startRow: startRow,
+                sortModel: oldParams.sortModel
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.datasource.source.getRows(params);</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$watch(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            return $scope.results;</span>
+        }, <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >            var results = data;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (!data) {</span>
+<span class="cstat-no" title="statement not covered" >                agPaginationController.resultCount = 0;</span>
+<span class="cstat-no" title="statement not covered" >                agPaginationController.previousEnabled = false;</span>
+<span class="cstat-no" title="statement not covered" >                agPaginationController.nextEnabled = false;</span>
+<span class="cstat-no" title="statement not covered" >                return;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            var reqObj = $scope.requestParams;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            agPaginationController.totalResults = data.total;</span>
+<span class="cstat-no" title="statement not covered" >            agPaginationController.startRow = (reqObj.page * reqObj.limit) - reqObj.limit + 1;</span>
+<span class="cstat-no" title="statement not covered" >            agPaginationController.endRow = Math.min(agPaginationController.startRow + reqObj.limit - 1, data.total);</span>
+<span class="cstat-no" title="statement not covered" >            agPaginationController.currentPage = reqObj.page;</span>
+<span class="cstat-no" title="statement not covered" >            agPaginationController.pageCount = Math.ceil(data.total/reqObj.limit);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            agPaginationController.previousEnabled = reqObj.page &gt; 1;</span>
+<span class="cstat-no" title="statement not covered" >            agPaginationController.nextEnabled = (reqObj.page &lt; agPaginationController.pageCount);</span>
+        }, true);
+    }])
+&nbsp;
+    .directive('agGridPagination', [<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: "A",
+            scope: {
+                datasource: "=agGridPagination",
+                results: "=",
+                requestParams: "="
+            },
+            templateUrl: "resourceAllocation/directives/agGridPagination.tpl.html",
+            controller: 'agPaginationController as paginationController'
+        };
+    }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 20 2015 15:07:09 GMT-0400 (EDT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

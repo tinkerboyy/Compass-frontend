@@ -1,0 +1,20 @@
+<div class="scheduleSummary">
+    <h2>{{ 'SCHEDULE_SUMMARY.TITLE' | translate}}</h2>
+    <div>
+        <tabset>
+            <tab heading="{{'SCHEDULE_SUMMARY.TABS.TASK_BASED'| translate}}"
+                 ui-sref="scheduleSummary.taskBased"
+                 active ="scheduleSummary.tabState"
+                 ui-sref-active="active">
+            </tab>
+            <tab heading="{{'SCHEDULE_SUMMARY.TABS.OLD'| translate}}"
+                 ui-sref="scheduleSummary.oldScheduler"
+                 active ="scheduleSummary.tabState"
+                 ui-sref-active="active">
+            </tab>
+        </tabset>
+        <div class="tab-view">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

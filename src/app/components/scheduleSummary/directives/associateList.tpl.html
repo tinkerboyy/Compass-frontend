@@ -1,0 +1,65 @@
+<div class="associatesList">
+    <div class="associatesHeader">
+        <div class="searchByCostCenter">
+            <span class="title">{{ 'SCHEDULE_SUMMARY.ASSOCIATIONS.SEARCH_BY.TITLE.TEAM' | translate }}</span>
+            <div class="costCenter"
+                 cost-center-typeahead
+                 ng-model="associateListController.selectedCostCenter"
+                 ng-change="associateListController.selectedCostCenterChanged(associateListController.selectedCostCenter)">
+            </div>
+        </div>
+
+        <div class="searchByJobTitle">
+            <span class="title">{{ 'SCHEDULE_SUMMARY.ASSOCIATIONS.SEARCH_BY.TITLE.POSITION' | translate }}</span>
+            <input class="jobTitle"
+                   type="text"
+                   ng-model="associateListController.jobTitle"
+                   ng-change="associateListController.filterData()"
+                   placeholder="filter by job title"><br/>
+        </div>
+
+        <div class="searchByAssociateName">
+            <div class="titleAndSearch">
+                <div class="title">Name</div>
+                <input class="associateName"
+                       type="text"
+                       ng-model="associateListController.associateName"
+                       ng-change="associateListController.filterData()"
+                       placeholder="filter by name">
+            </div>
+            <div class="hoursContainer">
+                <span class="hours">Hours</span>
+            </div>
+        </div>
+    </div>
+
+    <div as-sortable="associateListController.dragOptions" ng-model="associateListController.associates">
+        <div class="associatesContainer">
+            <ul>
+                <li class="jobs"
+                    ng-repeat="(job, associates) in associateListController.groupedAssociates">
+
+                    <div class="jobHeader" ng-click="isCollapsed = !isCollapsed">
+                        <span class="jobTitle">Position: {{ ::job }} ({{ associates.length }})</span>
+                        <span class="jobTitleIcon glyphicon"
+                              ng-class="{'glyphicon-menu-down': !isCollapsed, 'glyphicon-menu-left': isCollapsed}"
+                              aria-hidden="true"></span>
+                    </div>
+
+                    <div class="associateContainer" collapse="isCollapsed" style="height: 0px;">
+                        <ul>
+                            <li class="associate noSelect" ng-repeat="associate in associates" ng-class-even="'evenRows'" as-sortable-item>
+                                <div class="associateDetails" as-sortable-item-handle>
+                                    <div class="associateJob">{{ ::job }}</div>
+                                    <div class="associateName">{{ ::associate.Name }}<span class="associateId"> - {{ ::associate.empName }}</span></div>
+                                    <div class="associateHours">{{ (associate.schedHours !== null) ? associate.schedHours : 0 }}</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

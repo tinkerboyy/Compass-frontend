@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/resourceAllocation/directives/costCenterTypeahead.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/components/resourceAllocation/directives/costCenterTypeahead.js</span></h1>
+    <h2>
+        Statements: <span class="metric">43.28% <small>(29 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">11.54% <small>(3 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">23.53% <small>(4 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">43.28% <small>(29 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/components/resourceAllocation/directives/</a> &#187; costCenterTypeahead.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module('resourceAllocation.directive.CostCenterTypeahead', [
+    'resourceAllocation.service.ResourceAllocationService',
+    'resourceAllocation.directive.agGridPagination'
+    ])
+    .controller('TypeaheadController', ['$scope', '$filter', '$window', 'ResourceAllocationService',
+        function ($scope, $filter, $window, ResourceAllocationService) {
+            var typeaheadCtrl = this;
+            typeaheadCtrl.dropdownList = [];
+            typeaheadCtrl.searchPhrase = '';
+            typeaheadCtrl.showDropDownList = false;
+&nbsp;
+            typeaheadCtrl.lookupsPending = 0;
+&nbsp;
+            $scope.$window = $window;
+&nbsp;
+            typeaheadCtrl.searchCostCenter = function(searchPhrase) {
+                $scope.selectedCostCenter = null;
+                typeaheadCtrl.dropdownList = [];
+&nbsp;
+                typeaheadCtrl.toggleDropDown(true);
+&nbsp;
+                doSearch(searchPhrase);
+            };
+&nbsp;
+            // exposed for pagination
+            typeaheadCtrl.getResults = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                return ResourceAllocationService.currentLookupResultObject;</span>
+            };
+&nbsp;
+            typeaheadCtrl.getRequestParams = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                return ResourceAllocationService.currentLookupRequestParams;</span>
+            };
+&nbsp;
+            typeaheadCtrl.datasource = {
+                source: {
+                    pageSize: 5,
+                    getRows: <span class="fstat-no" title="function not covered" >function(params) {</span>
+<span class="cstat-no" title="statement not covered" >                        doSearch(typeaheadCtrl.searchPhrase, params);</span>
+                    }
+                },
+                lastParams: null
+            };
+&nbsp;
+            function doSearch(searchPhrase, params) {
+                var resultsPerPage = 5;
+&nbsp;
+                params = params ? <span class="branch-0 cbranch-no" title="branch not covered" >params </span>: {startRow:0};
+                var currentPage = parseInt(params.startRow / resultsPerPage, 10);
+&nbsp;
+                params.endRow = params.startRow + resultsPerPage;
+&nbsp;
+                typeaheadCtrl.lookupsPending++;
+&nbsp;
+                ResourceAllocationService
+                    .lookupCostCenters(searchPhrase, currentPage + 1, 0, resultsPerPage)
+                    .then(<span class="fstat-no" title="function not covered" >function(response) {</span>
+<span class="cstat-no" title="statement not covered" >                        typeaheadCtrl.lookupsPending--;</span>
+<span class="cstat-no" title="statement not covered" >                        typeaheadCtrl.datasource.lastParams = params;</span>
+<span class="cstat-no" title="statement not covered" >                        typeaheadCtrl.dropdownList = response.data;</span>
+                    });
+            }
+&nbsp;
+            typeaheadCtrl.selected = <span class="fstat-no" title="function not covered" >function(listItem) {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.selectedCostCenter = listItem;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (listItem) {</span>
+<span class="cstat-no" title="statement not covered" >                    typeaheadCtrl.searchPhrase = listItem.deptName;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                typeaheadCtrl.toggleDropDown();</span>
+            };
+&nbsp;
+            typeaheadCtrl.toggleDropDown = function(manualSetting) {
+                typeaheadCtrl.showDropDownList = manualSetting ? manualSetting : <span class="branch-1 cbranch-no" title="branch not covered" >!typeaheadCtrl.showDropDownList;</span>
+&nbsp;
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (typeaheadCtrl.showDropDownList) {
+                    $scope.$window.onclick = <span class="fstat-no" title="function not covered" >function (event) {</span>
+<span class="cstat-no" title="statement not covered" >                        closeSearchWhenClickingElsewhere(event, typeaheadCtrl.toggleDropDown);</span>
+                    };
+                } else {
+<span class="cstat-no" title="statement not covered" >                    typeaheadCtrl.showDropDownList = false;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.$window.onclick = null;</span>
+                }
+            };
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function closeSearchWhenClickingElsewhere(event, callbackOnClose) {</span>
+<span class="cstat-no" title="statement not covered" >                var clickedElement = event.target;</span>
+<span class="cstat-no" title="statement not covered" >                if (!clickedElement) {</span>
+<span class="cstat-no" title="statement not covered" >                    return;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var clickedOnTypeAheadHTML = checkParentChain(clickedElement);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (!clickedOnTypeAheadHTML) {</span>
+<span class="cstat-no" title="statement not covered" >                    callbackOnClose();</span>
+<span class="cstat-no" title="statement not covered" >                    return;</span>
+                }
+            }
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function checkParentChain(element) {</span>
+<span class="cstat-no" title="statement not covered" >                if (!element.parentElement) {</span>
+<span class="cstat-no" title="statement not covered" >                    return false;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (element.parentElement.classList.contains('costCenterTypeAhead'))</span>
+                {
+<span class="cstat-no" title="statement not covered" >                    return true;</span>
+                }
+                else
+                {
+<span class="cstat-no" title="statement not covered" >                    return checkParentChain(element.parentElement);</span>
+                }
+            }
+        }]
+    )
+&nbsp;
+    .filter('formatCostCenter', <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        return <span class="fstat-no" title="function not covered" >function(costCenter) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var formattedString = "";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (costCenter) {</span>
+<span class="cstat-no" title="statement not covered" >                formattedString = costCenter.deptName + " - ";</span>
+<span class="cstat-no" title="statement not covered" >                formattedString += costCenter.deptDesc ? costCenter.deptDesc : costCenter.wbtName + " (" + costCenter.wbtDesc + ")";</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            return formattedString;</span>
+        };
+    })
+&nbsp;
+    .directive('costCenterTypeahead', [
+<span class="fstat-no" title="function not covered" >        function() {</span>
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                restrict: 'EA',
+                scope: {
+                    selectedCostCenter: "=ngModel"
+                },
+                require: "ngModel",
+                templateUrl: 'resourceAllocation/directives/costCenterTypeahead.tpl.html',
+                controller: 'TypeaheadController as typeaheadCtrl',
+                link: <span class="fstat-no" title="function not covered" >function(scope, elem, attr, ctrl) {</span>
+                    // add a parser that will process each time the value is
+                    // parsed into the model when the user updates it.
+<span class="cstat-no" title="statement not covered" >                    ctrl.$parsers.unshift(<span class="fstat-no" title="function not covered" >function(value) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var valid = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (value) {</span>
+                            // test and set the validity after update.
+<span class="cstat-no" title="statement not covered" >                            valid = (value &amp;&amp; value.trim().length &gt; 0);</span>
+<span class="cstat-no" title="statement not covered" >                            ctrl.$setValidity('invalidCostCenter', valid);</span>
+                        }
+&nbsp;
+                        // if it's valid, return the value to the model,
+                        // otherwise return undefined.
+<span class="cstat-no" title="statement not covered" >                        return valid ? value : undefined;</span>
+                    });
+                }
+            };
+        }
+    ]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 20 2015 15:07:09 GMT-0400 (EDT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

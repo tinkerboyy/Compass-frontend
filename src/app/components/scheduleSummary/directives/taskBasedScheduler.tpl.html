@@ -1,0 +1,23 @@
+<div class="container-fluid task-based-scheduler">
+    <div class="row scheduler-row">
+        <div class="col-md-9 scheduler-body">
+            <div class="row scheduler-header">
+                <div class="col-md-12 scheduler-header-content">
+                    <p>Cost Center:&nbsp;<h3>
+                    {{ taskBasedScheduler.costCenter.deptName }} -
+                    {{ taskBasedScheduler.costCenter.deptDesc || taskBasedScheduler.costCenter.wbtName }}</h3></p>
+                </div>
+            </div>
+            <div task-list-calendar
+                 cost-center="taskBasedScheduler.costCenter"
+                 week-ending-date="taskBasedScheduler.weekEndingDate"
+                 class="row"></div>
+        </div>
+        <div class="col-md-3">
+            <div associate-list
+                    cost-center="taskBasedScheduler.costCenter"
+                    date="taskBasedScheduler.weekEndingDate">
+            </div>
+        </div>
+    </div>
+</div>

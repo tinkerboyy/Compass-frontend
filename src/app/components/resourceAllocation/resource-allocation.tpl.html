@@ -1,0 +1,20 @@
+<div class="resourceAllocation">
+    <h2>{{ 'RESOURCE_ALLOCATION.TITLE' | translate}}</h2>
+    <div>
+        <tabset>
+            <tab heading="{{'RESOURCE_ALLOCATION.TABS.WEEKLY_SEARCH' | translate}}"
+                 ui-sref="resourceAllocation.weeklySearch"
+                 active ="resourceAllocation.tabState"
+                 ui-sref-active="active">
+            </tab>
+            <tab heading="{{'RESOURCE_ALLOCATION.TABS.COST_CENTER_HISTORY' | translate}}"
+                 ui-sref="resourceAllocation.costCenterHistory"
+                 active ="resourceAllocation.tabState"
+                 ui-sref-active="active">
+            </tab>
+        </tabset>
+        <div class="tab-view">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

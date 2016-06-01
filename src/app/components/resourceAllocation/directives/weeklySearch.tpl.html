@@ -1,0 +1,69 @@
+<div class="weeklySearch">
+    <div class="row header">
+        <div class="col-md-12">
+            <form name="headerForm">
+                <div class="col-md-4">
+                    <p><strong>{{'RESOURCE_ALLOCATION.COST_CENTER' | translate}}</strong></p>
+                    <div cost-center-typeahead
+                            ng-model="weeklySearch.selectedCostCenter"
+                            required>
+                    </div>
+                </div>
+                <div class="col-md-2 col-paygroup">
+                    <p><strong>{{'RESOURCE_ALLOCATION.PAY_GROUP' | translate}}</strong></p>
+                    <div class="payGroup">
+                        <div dropdown>
+                            <button type="button" class="btn dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                                {{ weeklySearch.selectedPayGroup.name }} <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="item in weeklySearch.payGroups"
+                                    ng-click="weeklySearch.payGroupSelected(item)">
+                                    <a href="#" onclick="return false">{{ item.name }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 datepicker">
+                    <p><strong>{{'RESOURCE_ALLOCATION.WEEK_ENDING_DAY' | translate}}</strong></p>
+                    <input type="text"
+                           class="form-control"
+                           ng-model="weeklySearch.weekEndingDate"
+                           ng-required="true"
+                           datepicker-popup="{{ ::weeklySearch.weekEndingDateFormat }}"
+                           is-open="weeklySearch.weekEndingDateOpened"
+                           datepicker-options="weeklySearch.weekEndingDateDateOptions"
+                           date-disabled="weeklySearch.disabledDates(date, mode)"
+                           custom-class="weeklySearch.getDayClass(date, mode)"
+                           show-button-bar="false"
+                           close-on-date-selection="false"
+                           close-text="Close"
+                           required>
+                    <i class="glyphicon glyphicon-calendar glyphicon-calendar--position"
+                       ng-click="weeklySearch.openWeekEndingDateDatepicker($event)"></i>
+                    </input>
+                </div>
+                <div class="col-md-3">
+                    <div class="button-wrapper">
+                        <button type="button" class="btn btn-primary"
+                                ng-disabled="headerForm.$invalid"
+                                ng-click="weeklySearch.updateGridSearch(weeklySearch.selectedCostCenter)">{{ 'COMMON.GO' | translate }}</button>
+                        <button type="button" class="btn btn-primary">{{ 'COMMON.RESET' | translate }}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row gridContainer">
+        <div class="col-md-12">
+            <div class="gridParent">
+                <div ag-grid="weeklySearch.gridOptions" class="ag-fresh grid"></div>
+            </div>
+            <div grid-pagination="weeklySearch.datasource"
+                    results="weeklySearch.getResults()"
+                    request-params="weeklySearch.getRequestParams()"></div>
+        </div>
+    </div>
+</div>

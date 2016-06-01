@@ -1,0 +1,102 @@
+.resourceAllocation {
+  @import "costCenterRenderer";
+
+  .weeklySearch {
+    h2 {
+      margin-top: 5px;
+    }
+
+    .header {
+      margin:20px 0;
+
+      input, select {
+        height: 32px;
+      }
+
+      .payGroup {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        font-size: 12px;
+
+        .dropdown-toggle {
+          width: 100%;
+          background-color: inherit;
+          border: 1px solid #ccc;
+          text-align: left;
+
+          .caret {
+            position: absolute;
+            right: 8px;
+            top: 15px;
+            pointer-events: none;
+          }
+        }
+
+        li a {
+          &:hover {
+            background: #338cdf;
+            border-color: #2380dd #2179d5 #1a60aa;
+            color: #fff;
+          }
+        }
+      }
+
+      .datepicker tr:hover {
+        background: #eeeeee; cursor: pointer;
+      }
+
+      .selectedWeekBackground {
+        background-color: #008800;
+        font-weight: 500;
+      }
+
+      .glyphicon-calendar--position {
+        position: absolute;
+        right: 19px;
+        top: 38px;
+
+        cursor: pointer;
+      }
+
+      .button-wrapper {
+        margin: 28px 0 0;
+      }
+    }
+
+    .gridContainer {
+      position: relative;
+      height: 819px;
+
+      .col-md-12 {
+        height: 100%;
+      }
+
+      .gridParent {
+        height: 95%;
+
+        .grid {
+          height: 100%;
+
+          .ag-loading-center {
+            @extend .loadingAnimation;
+            display: inline;
+            padding: 44px 30px 10px 30px;
+
+            background-position: center 10px;
+          }
+
+          .ag-root {
+            font-size: 12px;
+          }
+        }
+
+        #south {
+          display: none;
+        }
+      }
+    }
+  }
+}

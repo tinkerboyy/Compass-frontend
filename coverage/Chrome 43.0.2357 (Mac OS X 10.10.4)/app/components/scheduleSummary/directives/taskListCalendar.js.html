@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/scheduleSummary/directives/taskListCalendar.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/components/scheduleSummary/directives/taskListCalendar.js</span></h1>
+    <h2>
+        Statements: <span class="metric">3.51% <small>(2 / 57)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 11)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">3.51% <small>(2 / 57)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/components/scheduleSummary/directives/</a> &#187; taskListCalendar.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module("scheduleSummary.directive.TaskListCalendar",[
+    'scheduleSummary.service.TasksService',
+    'common.filters.GetTimeFilter',
+    'scheduleSummary.directive.AssignmentCalendarCell'
+])
+    .controller("TaskListCalendarController", ['$scope', '$filter', '$stateParams', '$state', '$q', 'TasksService',
+<span class="fstat-no" title="function not covered" >        function($scope, $filter, $stateParams, $state, $q, TasksService){</span>
+<span class="cstat-no" title="statement not covered" >            var taskListCalendar = this;</span>
+<span class="cstat-no" title="statement not covered" >            taskListCalendar.tasks = [];</span>
+<span class="cstat-no" title="statement not covered" >            taskListCalendar.assignments = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var costCenter = $scope.costCenter;</span>
+<span class="cstat-no" title="statement not covered" >            var weekEndingDate = $scope.weekEndingDate;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            taskListCalendar.daysOfWeek = [];</span>
+<span class="cstat-no" title="statement not covered" >            taskListCalendar.dayOfWeekHeaderFormat = "EEE d MMM";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            taskListCalendar.tasksByDayAndTask = {};</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function initialize() {</span>
+<span class="cstat-no" title="statement not covered" >                if (!costCenter) {</span>
+<span class="cstat-no" title="statement not covered" >                    $state.go("resourceAllocation.weeklySearch");</span>
+<span class="cstat-no" title="statement not covered" >                    return;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (typeof costCenter !== "undefined" &amp;&amp; typeof weekEndingDate !== "undefined") {</span>
+<span class="cstat-no" title="statement not covered" >                    var weekEndDate = new Date(weekEndingDate);</span>
+<span class="cstat-no" title="statement not covered" >                    var tempDate = new Date(weekEndDate);</span>
+<span class="cstat-no" title="statement not covered" >                    tempDate.setDate(tempDate.getDate() - 6);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.daysOfWeek[0] = new Date(tempDate);</span>
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.daysOfWeek[1] = new Date(tempDate.setDate(tempDate.getDate() + 1));</span>
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.daysOfWeek[2] = new Date(tempDate.setDate(tempDate.getDate() + 1));</span>
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.daysOfWeek[3] = new Date(tempDate.setDate(tempDate.getDate() + 1));</span>
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.daysOfWeek[4] = new Date(tempDate.setDate(tempDate.getDate() + 1));</span>
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.daysOfWeek[5] = new Date(tempDate.setDate(tempDate.getDate() + 1));</span>
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.daysOfWeek[6] = new Date(weekEndDate);</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $q.all([</span>
+                    TasksService.getTasks(costCenter.schedId)
+                        .then(<span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                            var response = data;</span>
+<span class="cstat-no" title="statement not covered" >                            response.tasks = data.tasks;</span>
+<span class="cstat-no" title="statement not covered" >                            taskListCalendar.tasks = response.tasks;</span>
+                        }),
+                    TasksService.getAssignments(costCenter.schedId, costCenter.deptId, weekEndingDate)
+                        .then(<span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                            taskListCalendar.assignments = data.assignments;</span>
+                        })
+                ]).then(<span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                    taskListCalendar.tasksByDayAndTask = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    _.each(taskListCalendar.tasks, <span class="fstat-no" title="function not covered" >function(task) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        taskListCalendar.tasksByDayAndTask[task.projId] = {task:task, assignments:[[],[],[],[],[],[],[]]};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        _.each(taskListCalendar.assignments, <span class="fstat-no" title="function not covered" >function(assignment) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if (Number(task.projId) === Number(assignment.projId)) {</span>
+<span class="cstat-no" title="statement not covered" >                                for (var x=0; x &lt; taskListCalendar.daysOfWeek.length; x++) {</span>
+<span class="cstat-no" title="statement not covered" >                                    if (taskListCalendar.daysOfWeek[x].getTime() === (new Date(assignment.StartDate)).getTime()) {</span>
+<span class="cstat-no" title="statement not covered" >                                        taskListCalendar.tasksByDayAndTask[task.projId].assignments[x].push(assignment);</span>
+                                    }
+                                }
+                            }
+                        });
+                    });
+                });
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            taskListCalendar.getAssignmentsForDay = <span class="fstat-no" title="function not covered" >function(task, dayNumber) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (task &amp;&amp; taskListCalendar.tasksByDayAndTask &amp;&amp; taskListCalendar.tasksByDayAndTask[task.projId]) {</span>
+<span class="cstat-no" title="statement not covered" >                    return taskListCalendar.tasksByDayAndTask[task.projId].assignments[dayNumber];</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    return null;</span>
+                }
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            initialize();</span>
+    }])
+&nbsp;
+    .filter('taskTotalHours', [<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        return <span class="fstat-no" title="function not covered" >function(task) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var totalTime = 0;</span>
+&nbsp;
+            // total task hours
+<span class="cstat-no" title="statement not covered" >            if (task.taskEndTime &gt; task.taskStartTime) {</span>
+<span class="cstat-no" title="statement not covered" >                totalTime = task.taskEndTime - task.taskStartTime;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                totalTime = (1000 * 60 * 60 * 24) - task.taskStartTime;</span>
+<span class="cstat-no" title="statement not covered" >                totalTime += task.taskEndTime;</span>
+            }
+&nbsp;
+            // remove any breaks
+<span class="cstat-no" title="statement not covered" >            if (task.breakStartTime !== task.breakEndTime) {</span>
+<span class="cstat-no" title="statement not covered" >                if (task.breakEndTime &gt; task.breakStartTime) {</span>
+<span class="cstat-no" title="statement not covered" >                    totalTime -= (task.breakEndTime - task.breakStartTime);</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    var totalBreakTime = (1000 * 60 * 60 * 24) - task.breakStartTime;</span>
+<span class="cstat-no" title="statement not covered" >                    totalBreakTime += task.breakEndTime;</span>
+<span class="cstat-no" title="statement not covered" >                    totalTime -= totalBreakTime;</span>
+                }
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            totalTime = totalTime / 1000 / 60 / 60;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            return totalTime;</span>
+        };
+    }])
+&nbsp;
+    .directive("taskListCalendar", <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: "A",
+            scope: {
+                costCenter: '=costCenter',
+                weekEndingDate: '=weekEndingDate'
+            },
+            controller: "TaskListCalendarController as taskListCalendar",
+            templateUrl: "scheduleSummary/directives/taskListCalendar.tpl.html"
+        };
+    });
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 20 2015 15:07:09 GMT-0400 (EDT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

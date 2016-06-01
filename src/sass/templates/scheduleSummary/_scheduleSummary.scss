@@ -1,0 +1,75 @@
+@import "taskListCalendar";
+@import "associatesList";
+
+.scheduleSummary {
+  .task-based-scheduler {
+    .scheduler-row {
+      @include elem-position(relative, null, 0, null, 0);
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.as-sortable-drag {
+  .associateDetails {
+    max-width: 160px;
+    padding: 5px;
+
+    background-color: #fff;
+    border: solid 1px #000;
+
+    .associateJob {
+      display: block;
+      font-weight: bold;
+    }
+
+    .associateId {
+      display: none;
+    }
+
+    .associateHours {
+      display: none;
+
+      .popover {
+        background-color: #D8EDED;
+      }
+
+      .popover.top > .arrow {
+        display: none;
+      }
+
+      .row-wrapper {
+        position: relative;
+        height: 400px;
+
+        .row-positions-content {
+          position: absolute;
+          overflow-y: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.modal-dialog {
+  .modal-content {
+    .panel {
+      margin: 0 0 5px;
+      border-radius: 0px;
+    }
+
+    .panel-primary {
+      border-color: transparent;
+    }
+
+    .form-group {
+      display: inline-block;
+      width: 90px;
+    }
+
+    .form-row {
+      margin: 5px 5px;
+    }
+ }
+}

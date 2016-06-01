@@ -1,0 +1,75 @@
+<div class="container-fluid taskListCalendar noSelect">
+    <div class="row">
+        <div class="col-md-12 taskList">
+            <table>
+                <thead>
+                    <tr class="header">
+                        <td class="headerTaskName">task</td>
+                        <td class="headerStartTime">start</td>
+                        <td class="headerEndTime">end</td>
+                        <td class="headerTotalHours">total</td>
+                        <td class="headerDayOfWeek">{{ ::taskListCalendar.daysOfWeek[0] | date : taskListCalendar.dayOfWeekHeaderFormat }}</td>
+                        <td class="headerDayOfWeek">{{ ::taskListCalendar.daysOfWeek[1] | date : taskListCalendar.dayOfWeekHeaderFormat }}</td>
+                        <td class="headerDayOfWeek">{{ ::taskListCalendar.daysOfWeek[2] | date : taskListCalendar.dayOfWeekHeaderFormat }}</td>
+                        <td class="headerDayOfWeek">{{ ::taskListCalendar.daysOfWeek[3] | date : taskListCalendar.dayOfWeekHeaderFormat }}</td>
+                        <td class="headerDayOfWeek">{{ ::taskListCalendar.daysOfWeek[4] | date : taskListCalendar.dayOfWeekHeaderFormat }}</td>
+                        <td class="headerDayOfWeek">{{ ::taskListCalendar.daysOfWeek[5] | date : taskListCalendar.dayOfWeekHeaderFormat }}</td>
+                        <td class="headerDayOfWeek">{{ ::taskListCalendar.daysOfWeek[6] | date : taskListCalendar.dayOfWeekHeaderFormat }}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tasks" ng-repeat="task in taskListCalendar.tasks">
+                        <td class="taskName">{{ ::task.Name }}</td>
+                        <td class="startTime">{{ ::task.taskStartTime | getTime }}</td>
+                        <td class="endTime">{{ ::task.taskEndTime | getTime }}</td>
+                        <td class="totalHours">{{ ::task | taskTotalHours }}</td>
+                        <td class="dayOfWeek"
+                            assignment-calendar-cell
+                            task="task"
+                            assignments="taskListCalendar.getAssignmentsForDay(task,0)"
+                            day-number="0">
+                        </td>
+                        <td class="dayOfWeek"
+                            assignment-calendar-cell
+                            task="task"
+                            assignments="taskListCalendar.getAssignmentsForDay(task,1)"
+                            day-number="1">
+                        </td>
+                        <td class="dayOfWeek"
+                            assignment-calendar-cell
+                            task="task"
+                            assignments="taskListCalendar.getAssignmentsForDay(task,2)"
+                            day-number="2">
+                        </td>
+                        <td class="dayOfWeek"
+                            assignment-calendar-cell
+                            task="task"
+                            assignments="taskListCalendar.getAssignmentsForDay(task,3)"
+                            all-assignments="taskListCalendar.assignments"
+                            day-number="3">
+                        </td>
+                        <td class="dayOfWeek"
+                            assignment-calendar-cell
+                            task="task"
+                            assignments="taskListCalendar.getAssignmentsForDay(task,4)"
+                            all-assignments="taskListCalendar.assignments"
+                            day-number="4">
+                        </td>
+                        <td class="dayOfWeek"
+                            assignment-calendar-cell
+                            task="task"
+                            assignments="taskListCalendar.getAssignmentsForDay(task,5)"
+                            day-number="5">
+                        </td>
+                        <td class="dayOfWeek"
+                            assignment-calendar-cell
+                            task="task"
+                            assignments="taskListCalendar.getAssignmentsForDay(task,6)"
+                            day-number="6">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

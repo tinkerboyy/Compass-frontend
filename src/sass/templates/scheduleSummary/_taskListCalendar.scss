@@ -1,0 +1,124 @@
+.taskListCalendar {
+
+  &>div {
+    &>.col-md-4 {
+      padding: 0px;
+    }
+    &>.col-md-8 {
+      padding: 0px;
+    }
+  }
+
+  .taskList {
+
+    padding: 0px;
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+
+      .header {
+        .headerTaskName {
+          width: 12%;
+        }
+        .headerStartTime {
+          width: 8%;
+        }
+        .headerEndTime {
+          width: 8%;
+        }
+        .headerTotalHours {
+          width: 3%;
+        }
+        .headerDayOfWeek {
+          text-align: center;
+        }
+      }
+
+      .tasks {
+
+        tr {
+          display: table-row;
+        }
+
+        td {
+          height: 1px; //required for child
+          padding: 0px;
+          border: 1px solid #000;
+          vertical-align: top;
+        }
+
+        .taskName {
+          width: 12%;
+        }
+        .startTime {
+          width: 8%;
+        }
+        .endTime {
+          width: 8%;
+        }
+        .totalHours {
+          width: 3%;
+        }
+
+        .dayOfWeek {
+          width: 10%;
+          max-width: 10%;
+
+
+        }
+      }
+    }
+  }
+}
+
+.assignmentCalendarCell {
+  height: 100%;
+  width: 100%;
+
+  ul {
+    height: 100%;
+    width: 100%;
+
+    padding: 0px;
+    margin: 0px;
+
+    list-style-type: none;
+
+    li {
+      padding: 3px 3px 0px 3px;
+
+      &:last-child {
+        padding-bottom: 3px;
+      }
+    }
+
+  }
+
+  .as-active-dropzone {
+    background-color: #99cc00;
+  }
+
+  .as-sortable-placeholder {
+    display: none;
+  }
+}
+
+.as-sortable-dragging {
+  min-width: 150px;
+}
+
+.userAssignment {
+  width: 100%;
+  padding: 2px;
+  margin-bottom: 1px;
+
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+
+  overflow-x: hidden;
+  white-space: nowrap;
+
+}
+

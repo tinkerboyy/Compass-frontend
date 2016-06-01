@@ -1,0 +1,36 @@
+<div class="assignmentCalendarCell">
+    <ul as-sortable="assignmentCalendarCell.dropOptions" ng-model="assignments">
+        <li ng-repeat="assignment in assignments track by $index" as-sortable-item ng-dblclick="assignmentCalendarCell.showModal(assignment)">
+            <div class="userAssignment"
+                 as-sortable-item-handle
+                 popover-template="assignmentCalendarCell.templateUrl"
+                 popover-trigger="hover"
+                 popover-popup-delay="1000">
+                {{ ::assignment.Name }}
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script type="text/ng-template" id="popup.html">
+    <div class="">
+        <p>
+            <span class="graphicon graphicon-book"></span>
+            <span><strong>Name:</strong></span>
+        </p>
+
+        <p>{{ ::assignment.Name }}</p>
+
+        <p>
+            <span class="graphicon graphicon-time"></span>
+            <span><strong>Time:</strong></span>
+        </p>
+        <p>{{ ::assignment.startTime | date:'hh:mm a' }} - {{ ::assignment.endTime | date:'hh:mm a' }}</p>
+
+        <p>
+            <span class="graphicon graphicon-time"></span>
+            <span><strong>Break:</strong></span>
+        </p>
+        <p>{{ ::assignment.brkStartTime | date:'hh:mm a' }} - {{ ::assignment.brkEndTime | date:'hh:mm a' }}</p>
+    </div>
+</script>

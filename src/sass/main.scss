@@ -1,0 +1,89 @@
+@import "compass/css3";
+@import "common/variables";
+@import "common/mixins";
+@import "common/costCenterTypeahead";
+@import "common/paginationControl";
+
+.mainContent {
+    min-height: 300px;
+    margin-top: 38px;
+    margin-bottom: 46px; // 41 + 5px space
+}
+
+input {
+    border: 1px solid $input-border-color;
+}
+
+input[readonly] {
+    background-color: $read-only-background-color;
+    border: 1px solid $input-border-color;
+}
+
+input[type=text] {
+    min-height: 25px;
+}
+
+select:disabled {
+    background-color: $read-only-background-color;
+}
+
+.unsupportedBrowser{
+    padding-top: 100px;
+    margin:auto;
+
+    .image {
+        margin-left:auto;
+        margin-right:auto;
+        width:43px;
+        height:167px;
+        padding-top:50px;
+    }
+    .text {
+        margin-left:auto;
+        margin-right:auto;
+        width:100%;
+        text-align:center;
+        padding-top:15px;
+    }
+}
+
+//.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.tab-view {
+    margin: 0px;
+    padding: 0px;
+    margin-top: -1px;
+    border: 1px solid #ddd;
+}
+
+body {
+    font-size: 12px;
+}
+
+.form-control, .btn {
+    font-size: 12px;
+}
+
+.loadingAnimation {
+    display: block;
+
+    background-image: url("/images/loading.gif");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// prevents user from selecting text
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@import "templates/header";
+@import "templates/footer";
+@import "templates/resourceAllocation/resourceAllocation";
+@import "templates/scheduleSummary/scheduleSummary";

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/scheduleSummary/directives/selectDropdown.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/components/scheduleSummary/directives/selectDropdown.js</span></h1>
+    <h2>
+        Statements: <span class="metric">6.52% <small>(3 / 46)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 11)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">6.52% <small>(3 / 46)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/components/scheduleSummary/directives/</a> &#187; selectDropdown.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('scheduleSummary.directive.SelectDropdown', [])
+    .controller('SelectDropdownController', ['$scope', '$window',
+<span class="fstat-no" title="function not covered" >        function ($scope, $window) {</span>
+<span class="cstat-no" title="statement not covered" >            var selectDropdownCtrl = this;</span>
+<span class="cstat-no" title="statement not covered" >            selectDropdownCtrl.dropdownList = [];</span>
+<span class="cstat-no" title="statement not covered" >            selectDropdownCtrl.showDropDownList = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            selectDropdownCtrl.lookupsPending = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.$window = $window;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.$watch($scope.responseData, <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                selectDropdownCtrl.dropdownList = $scope.responseData;</span>
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            selectDropdownCtrl.selectPosition = <span class="fstat-no" title="function not covered" >function(searchposition) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                selectDropdownCtrl.toggleDropDown(true);</span>
+<span class="cstat-no" title="statement not covered" >                console.log(selectDropdownCtrl.searchPosition);</span>
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            selectDropdownCtrl.selected = <span class="fstat-no" title="function not covered" >function(position, group) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if(position) {</span>
+<span class="cstat-no" title="statement not covered" >                    selectDropdownCtrl.searchPosition = position;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.selectedPosition = position;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                selectDropdownCtrl.toggleDropDown();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.result({group: position});</span>
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            selectDropdownCtrl.toggleDropDown = <span class="fstat-no" title="function not covered" >function(manualSetting) {</span></span>
+<span class="cstat-no" title="statement not covered" >                selectDropdownCtrl.showDropDownList = manualSetting ? manualSetting : !selectDropdownCtrl.showDropDownList;</span>
+<span class="cstat-no" title="statement not covered" >                selectDropdownCtrl.dropdownList = $scope.responseData;</span>
+<span class="cstat-no" title="statement not covered" >                if (selectDropdownCtrl.showDropDownList) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.$window.onclick = <span class="fstat-no" title="function not covered" >function (event) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        closeSearchWhenClickingElsewhere(event, selectDropdownCtrl.toggleDropDown);</span>
+                    };
+                } else {
+<span class="cstat-no" title="statement not covered" >                    selectDropdownCtrl.showDropDownList = false;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.$window.onclick = null;</span>
+                }
+            };
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function closeSearchWhenClickingElsewhere(event, callbackOnClose) {</span>
+<span class="cstat-no" title="statement not covered" >                var clickedElement = event.target;</span>
+<span class="cstat-no" title="statement not covered" >                if (!clickedElement) {</span>
+<span class="cstat-no" title="statement not covered" >                    return;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var clickedOnTypeAheadHTML = checkParentChain(clickedElement);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (!clickedOnTypeAheadHTML) {</span>
+<span class="cstat-no" title="statement not covered" >                    callbackOnClose();</span>
+<span class="cstat-no" title="statement not covered" >                    return;</span>
+                }
+            }
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function checkParentChain(element) {</span>
+<span class="cstat-no" title="statement not covered" >                if (!element.parentElement) {</span>
+<span class="cstat-no" title="statement not covered" >                    return false;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (element.parentElement.classList.contains('selectDropdown')) {</span>
+<span class="cstat-no" title="statement not covered" >                    return true;</span>
+                }
+                else {
+<span class="cstat-no" title="statement not covered" >                    return checkParentChain(element.parentElement);</span>
+                }
+            }
+&nbsp;
+        }]
+)
+&nbsp;
+    .directive('selectDropdown', [
+<span class="fstat-no" title="function not covered" >        function() {</span>
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                restrict: 'EA',
+                scope: {
+                    selectedPosition: '=ngModel',
+                    responseData: '=data',
+                    result: '&amp;',
+                    searchVal: '='
+                },
+                require: 'ngModel',
+                templateUrl: 'scheduleSummary/directives/selectDropDown.tpl.html',
+                controller: 'SelectDropdownController as selectDropdownCtrl',
+                link: <span class="fstat-no" title="function not covered" >function(scope, elem, attr, ctrl) {</span>
+<span class="cstat-no" title="statement not covered" >                    ctrl.$parsers.unshift(<span class="fstat-no" title="function not covered" >function(value) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var valid = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (value) {</span>
+<span class="cstat-no" title="statement not covered" >                            valid = (value &amp;&amp; value.trim().length &gt; 0);</span>
+<span class="cstat-no" title="statement not covered" >                            ctrl.$setValidity('invalidCostCenter', valid);</span>
+                        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        return valid ? value : undefined;</span>
+                    });
+                }
+            };
+        }
+    ]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 20 2015 15:07:09 GMT-0400 (EDT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
